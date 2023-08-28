@@ -199,7 +199,7 @@ docker exec -it webapp_1 /bin/bash
 
 
 #1. console-helloworld
-详细参考链接：https://github.com/JiangRenDevOps/DevOpsNotes/tree/master/WK3_Dockerisation/dockerfile/1.console-helloworld
+[详细参考链接](https://github.com/JiangRenDevOps/DevOpsNotes/tree/master/WK3_Dockerisation/dockerfile/1.console-helloworld)
 -简单快速的方法，可以说是一键直接运行，看以下代码（会按照dockerfile里面的代码按照顺序执行）：
 ```
 ./run.sh
@@ -245,7 +245,7 @@ docker run --rm jr/console-helloworld
 ```
 
 #2. web-nginx
-详细参考链接：https://github.com/JiangRenDevOps/DevOpsNotes/tree/master/WK3_Dockerisation/dockerfile/2.web-nginx
+[详细参考链接](https://github.com/JiangRenDevOps/DevOpsNotes/tree/master/WK3_Dockerisation/dockerfile/2.web-nginx)
 同以上实验#1相同2种方法： 1. 直接一键运行 ./run.sh  2. 先build再run
 这个实验需要注意的点：
 
@@ -266,7 +266,7 @@ docker images
 
 
 #3. web-python-flask
-详细参考链接：https://github.com/JiangRenDevOps/DevOpsNotes/tree/master/WK3_Dockerisation/dockerfile/3.web-python-flask
+[详细参考链接](https://github.com/JiangRenDevOps/DevOpsNotes/tree/master/WK3_Dockerisation/dockerfile/3.web-python-flask)
 同以上实验#1相同2种方法： 1. 直接一键运行 ./run.sh  2. 先build再run
 这个实验需要注意的点：
 -类似我们之前的CLI实验
@@ -288,7 +288,7 @@ In the browser, open http://localhost/?city=jin and you will get a list of citie
  3.程序运行起来
 
 #4. console-dependency
-详细参考链接：https://github.com/JiangRenDevOps/DevOpsNotes/tree/master/WK3_Dockerisation/dockerfile/4.console-dependency
+[详细参考链接](https://github.com/JiangRenDevOps/DevOpsNotes/tree/master/WK3_Dockerisation/dockerfile/4.console-dependency)
 在实验3的基础上，自动帮我们搜索, au,sh,等citymatcher关键字,不需要我们手动一个个去浏览器里面敲:
 http://localhost/?city=au
 http://localhost/?city=sh
@@ -346,7 +346,7 @@ COPY
 RUN
 EXPOSE
 ENTRYPOINT
-以上命令和详细信息，还有一些小练习可以参考链接：https://github.com/JiangRenDevOps/DevOpsNotes/blob/master/WK3_Dockerisation/0.docker-intro.md
+以上命令和详细信息，还有一些小练习可以参考[链接](https://github.com/JiangRenDevOps/DevOpsNotes/blob/master/WK3_Dockerisation/0.docker-intro.md)
 
 #### 2.2.4 Docker-compose 手动练习handson来学习命令
 -会了docker file 之后，我们来到了docker-compose
@@ -395,7 +395,7 @@ If you finished today's exercises try: https://docs.docker.com/compose/gettingst
 
 ### docker-registry.md
 
-链接：https://github.com/JiangRenDevOps/DevOpsNotes/blob/master/WK3_Dockerisation/4.docker-registry.md
+[链接](https://github.com/JiangRenDevOps/DevOpsNotes/blob/master/WK3_Dockerisation/4.docker-registry.md)
 
 
 Share
