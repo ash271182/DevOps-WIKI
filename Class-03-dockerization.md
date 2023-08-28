@@ -33,7 +33,7 @@
 
 Devops解决的问题：如何加速FEATURE的DELO,如何让用户能够更快更好的最新DEV的FEATURE
 
-![Alt text](pictures/devops.png?raw=true)
+![Alt text](image/devops.png?raw=true)
 
 这个循环中：
 PLAN& CODE ----developer经常做的，DEVOPS需要了解知道，会做些CONFIGUREATION CHANGE 和开发
@@ -66,7 +66,7 @@ Devops_Overview.drawio 流程图
 ### 2.2 第二部分： Docker
 #### 2.2.1 Docker introduction
 
-![Alt text](pictures/Container_VM_Implementation.png?raw=true)
+![Alt text](image/Container_VM_Implementation.png?raw=true)
 
 
 container 系统-----程序员只需要专心写程序就好，不管底层的系统。更好的利用资源，轻量级。
@@ -132,7 +132,7 @@ Why Docker?
  
 如图1：Docker 的使用会贯穿整个CI/CD的过程
 	
-![Alt text](pictures/inner-outer-loop.png?raw=true)
+![Alt text](image/inner-outer-loop.png?raw=true)
 
 --image repo 的作用 
 
