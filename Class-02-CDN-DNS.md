@@ -241,10 +241,10 @@ https://github.com/JiangRenDevOps/DevOpsLectureNotesV4/blob/main/WK1-CDN-DNS /ho
 
 ### 2.4 Homework（11期DEVOPS班）
 
-https://github.com/JiangRenDevOps/DevOpsNotes/blob/master/WK1_CDN_DNS/homework.md
+<https://github.com/JiangRenDevOps/DevOpsNotes/blob/master/WK1_CDN_DNS/homework.md>
 
 Extended reading material  
-https://github.com/JiangRenDevOps/DevOpsNotes/blob/master/WK1_CDN_DNS/reading.md
+<https://github.com/JiangRenDevOps/DevOpsNotes/blob/master/WK1_CDN_DNS/reading.md>
 
 
 ## 5.AWS
