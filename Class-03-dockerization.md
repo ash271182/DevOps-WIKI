@@ -199,8 +199,10 @@ docker exec -it webapp_1 /bin/bash
 
 
 #1. console-helloworld
-[详细参考链接](https://github.com/JiangRenDevOps/DevOpsNotes/tree/master/WK3_Dockerisation/dockerfile/1.console-helloworld)
--简单快速的方法，可以说是一键直接运行，看以下代码（会按照dockerfile里面的代码按照顺序执行）：
+
+详细参考链接:<https://github.com/JiangRenDevOps/DevOpsNotes/tree/master/WK3_Dockerisation/dockerfile/1.console-helloworld>
+
+简单快速的方法，可以说是一键直接运行，看以下代码（会按照dockerfile里面的代码按照顺序执行）：
 ```
 ./run.sh
 ```
