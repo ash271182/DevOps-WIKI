@@ -298,9 +298,9 @@ In the browser, open http://localhost/?city=jin and you will get a list of citie
 详细参考链接:<https://github.com/JiangRenDevOps/DevOpsNotes/tree/master/WK3_Dockerisation/dockerfile/4.console-dependency>
 
 在实验3的基础上，自动帮我们搜索, au,sh,等citymatcher关键字,不需要我们手动一个个去浏览器里面敲:
-http://localhost/?city=au
-http://localhost/?city=sh
-http://localhost/?city=ing
+<http://localhost/?city=au>
+<http://localhost/?city=sh>
+<http://localhost/?city=ing>
 
 然后自动返回结果，在command line里面提供这些信息
 
@@ -342,7 +342,7 @@ for i in $(seq 2); do
 done
 ```
 2个container 进行通信， link 查文档:
-链接：https://docs.docker.com/network/links/
+链接：<https://docs.docker.com/network/links/>
  Legacy container links
  The --link flag is a legacy feature of Docker. It may eventually be removed. Unless you absolutely need to continue using it, we recommend that you use user-defined networks to facilitate communication between two containers instead of using --link. One feature that user-defined networks do not support that you can do with --link is sharing environment variables between containers. However, you can use other mechanisms such as volumes to share environment variables between containers in a more controlled way.
 
@@ -359,6 +359,7 @@ ENTRYPOINT
 #### 2.2.4 Docker-compose 手动练习handson来学习命令
 -会了docker file 之后，我们来到了docker-compose
 参考链接：<https://github.com/JiangRenDevOps/DevOpsNotes/tree/master/WK3_Dockerisation/docker-compose>
+
 要学会看以下的yml文件:
 ```
 version: '3'
