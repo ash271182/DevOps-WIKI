@@ -427,7 +427,8 @@ AWSElasticBeanstalkEnhancedHealth and AWSElasticBeanstalkManagedUpdatesCustomerR
 4) Commit `git commit -m "MP-1 Initialise the folder"`
 5) Git push `git push --set-upstream origin issue/MP-1-init-the-folder`
 6) Create a Pull Request and Merge the Pull Request
-7) `git checkout MAIN & git pull`
+7) git checkout main
+8) git pull
 
 
 ## Step 3. Create an application on Elastic beanstalk
