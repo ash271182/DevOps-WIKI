@@ -1,4 +1,63 @@
-# Class 05 - Linux and Bash
+# Class 07 - Linux and Bash
+
+# Introduction
+
+Lecturer: Sai Li
+company:ANZX
+Certificate: CKA
+
+## Takeways from this class
+
+1. Productivity:  提高生产效率
+using CLI(command line interface)
+2. do you own research like if you are familiar with AWS functions try to find Equilenvent of AWS ,AZURE, GCP, functions ECT
+3. useful tools---find them and use them
+4. using Linux env to force yourself to use it & play it
+    -crontab guru website ---practise 
+
+
+### Ubuntu is the the worlds most popular Linux-based desktop operating system
+
+• Easy Integration
+• Large Community
+• Wide Range of Programming Tools
+• Certified Hardware--Most mainstream PC and hardware manufacturers
+such as Dell, Lenovo, HP, and the Raspberry Pi Foundation certify their
+machines for Ubuntu
+• Comprehensive Software Support--With Ubuntu, LTS version users get free
+software updates and security patches for a minimum of five years after the
+release.
+
+
+
+### Package management
+- Debian or Ubuntu apt-get
+- Fedora, CentOS, or Red Hat yum
+- Mac OS homebrew
+YUM and APT offer the same core functionalities when it comes to
+installing packages. Both tools keep the information in a database and
+provide the same basic command-line features. However, some key
+differences set the two package managers apart.
+
+
+
+### What is CVE
+CVE, short for Common Vulnerabilities and Exposures, is a list of publicly disclosed
+computer security flaws. When someone refers to a CVE, they mean a security flaw
+that's been assigned a CVE ID number
+
+### Top level directories
+
+• /bin – binary or executable programs.
+•/etc – system configuration files.
+•/home – home directory. It is the default current directory.
+•/opt – optional or third-party software.
+•/tmp – temporary space, typically cleared on reboot.
+•/usr – User related programs.
+•/var – log files.
+
+
+# Class 07 - Linux and Bash
 ## 主要知识点
   - [1.Introduce to Linux](#1introduce-to-linux)
     - [1.1 Overview](#11-overview)
@@ -162,4 +221,11 @@ Regex is widely used in multiple programming languages using almost the same syn
 
 
 ## 4.Homework
+ Add regex validator for pull request merge / squash to make sure the pull
+request tittle is start with the jiangren jira issue format “jiangren-1234”
+• Play the game bashcrawl
+• git clone https://gitlab.com/slackermedia/bashcrawl.git bashcrawl
+• Use at least five diff commands/ways to write “Hello Jiangren” to a txt file
+
+
 > https://github.com/JiangRenDevOps/DevOpsLectureNotesV6/blob/master/WK5_Linux_Bash_Basics/homework.md
