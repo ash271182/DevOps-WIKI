@@ -4,7 +4,7 @@
 
 - Lecturer: Sai Li
 - company:ANZX
--Certificate: CKA
+- Certificate: CKA
 
 ## Takeways from this class
 
