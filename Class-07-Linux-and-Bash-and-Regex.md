@@ -4,13 +4,12 @@
 
 - Lecturer: Sai Li
 - company:ANZX
-- Certificate: CKA
+- Certificate: CKA,CKS, ect.
 
 ## Takeways from this class
 
-1. Productivity:  提高生产效率
-using CLI(command line interface)
-2. do you own research like if you are familiar with AWS functions try to find Equilenvent of AWS ,AZURE, GCP, functions ECT
+1. Productivity:  using CLI(command line interface)
+2. Do you own research like if you are familiar with AWS functions try to find Equilenvent of AWS ,AZURE, GCP, functions ECT
 3. useful tools---find them and use them
 4. using Linux env to force yourself to use it & play it
     -crontab guru website ---practise 
