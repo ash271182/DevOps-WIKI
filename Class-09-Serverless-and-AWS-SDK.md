@@ -3,15 +3,15 @@
 # Lecturer:Holly Liu
 
 
-Agenda
-● Serverless
-  ○ Overview
-  ○ AWS Lambda: run your code on cloud
-  ○ Build a Serverless Hello World API
-  ○ Use Lambda with other AWS services
-● AWS SDK
-  ○ AWS CLI
-  ○ AWS SDK for Node.js
+## Agenda
+- Serverless
+  - ○ Overview
+  - ○ AWS Lambda: run your code on cloud
+  - ○ Build a Serverless Hello World API
+  - ○ Use Lambda with other AWS services
+- AWS SDK
+  - ○ AWS CLI
+  - ○ AWS SDK for Node.js
 
 
 
