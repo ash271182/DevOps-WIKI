@@ -1,3 +1,36 @@
+# Lesson 09 Serverless and AWS SDK
+
+# Lecturer:Holly Liu
+
+
+Agenda
+● Serverless
+  ○ Overview
+  ○ AWS Lambda: run your code on cloud
+  ○ Build a Serverless Hello World API
+  ○ Use Lambda with other AWS services
+● AWS SDK
+  ○ AWS CLI
+  ○ AWS SDK for Node.js
+
+
+
+
+## Develop Serverless project using AWS SAM
+ref link:<https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/serverless-getting-started-hello-world.html>
+
+
+## AWS SDK for Node.js
+
+Use Javascript to create, configure and manage AWS
+resources.
+Installation, configure and authentication: refer to
+<https://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/getting-started-nodejs.html>
+
+## Homework
+
+<https://github.com/JiangRenDevOps/DevOpsNotes/blob/master/WK6_Serverless_AWS_SDK/homework.md>
+
 
 # Class 06 - Serverless and AWS SDK
 ## 主要知识点
