@@ -1,5 +1,5 @@
 
-# Class 12 - Terraform
+# Class 11 - Terraform
 ## 主要知识点
   - [1.Infrastructure as Code and Tools](#1infrastructure-as-code-and-tools)
     - [1.1 What is Infrastructure as Code](#11-what-is-infrastructure-as-code)
