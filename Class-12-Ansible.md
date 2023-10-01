@@ -1,4 +1,94 @@
-# Class 7 Ansible
+# Class 12 Ansible
+
+## handson
+# handson 出现的问题：
+## build AMI provisioned by ansible - 2.bake-ec2-to-image-ansible-provisioner
+
+error message:fatal: [default]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: command-line line 0: keyword hostkeyalgorithms extra arguments at end of line", "unreachable": true}
+
+我初步判断可能出现的问题：大方向应该是SSH COMMUNICATION 里面的问题 （SSH 文件配置问题，ANSIBLE & AWS PLUGIN版本问题，或 SSH-RSA ALGORITHM默认被DISABLE SSH2-RSA 等问题都有可能）
+
+```
+jiangren-packer-demo-1.amazon-ebs.aws: Provisioning with Ansible...
+    jiangren-packer-demo-1.amazon-ebs.aws: Setting up proxy adapter for Ansible....
+==> jiangren-packer-demo-1.amazon-ebs.aws: Executing Ansible: ansible-playbook -e packer_build_name="aws" -e packer_builder_type=amazon-ebs --ssh-extra-args '-o IdentitiesOnly=yes' -e ansible_ssh_private_key_file=/tmp/ansible-key3087164875 -i /tmp/packer-provisioner-ansible3237864418 /home/aaron/jrnotes/DevOpsNotes/WK7_CM_Ansible_Packer/packer/2.bake-ec2-to-image-ansible-provisioner/playbook.yml                                                                                                                                                                         
+    jiangren-packer-demo-1.amazon-ebs.aws:  ______________________________
+    jiangren-packer-demo-1.amazon-ebs.aws: < PLAY [Jiangren Packer demo2] >
+    jiangren-packer-demo-1.amazon-ebs.aws:  ------------------------------
+    jiangren-packer-demo-1.amazon-ebs.aws:         \   ^__^
+    jiangren-packer-demo-1.amazon-ebs.aws:          \  (oo)\_______
+    jiangren-packer-demo-1.amazon-ebs.aws:             (__)\       )\/\
+    jiangren-packer-demo-1.amazon-ebs.aws:                 ||----w |
+    jiangren-packer-demo-1.amazon-ebs.aws:                 ||     ||
+    jiangren-packer-demo-1.amazon-ebs.aws:
+    jiangren-packer-demo-1.amazon-ebs.aws:  ________________________
+    jiangren-packer-demo-1.amazon-ebs.aws: < TASK [Gathering Facts] >
+    jiangren-packer-demo-1.amazon-ebs.aws:  ------------------------
+    jiangren-packer-demo-1.amazon-ebs.aws:         \   ^__^
+    jiangren-packer-demo-1.amazon-ebs.aws:          \  (oo)\_______
+    jiangren-packer-demo-1.amazon-ebs.aws:             (__)\       )\/\
+    jiangren-packer-demo-1.amazon-ebs.aws:                 ||----w |
+    jiangren-packer-demo-1.amazon-ebs.aws:                 ||     ||
+    jiangren-packer-demo-1.amazon-ebs.aws:
+    jiangren-packer-demo-1.amazon-ebs.aws: fatal: [default]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: command-line line 0: keyword hostkeyalgorithms extra arguments at end of line", "unreachable": true}                                                                                                                                       
+    jiangren-packer-demo-1.amazon-ebs.aws:  ____________
+    jiangren-packer-demo-1.amazon-ebs.aws: < PLAY RECAP >
+    jiangren-packer-demo-1.amazon-ebs.aws:  ------------
+    jiangren-packer-demo-1.amazon-ebs.aws:         \   ^__^
+    jiangren-packer-demo-1.amazon-ebs.aws:          \  (oo)\_______
+    jiangren-packer-demo-1.amazon-ebs.aws:             (__)\       )\/\
+    jiangren-packer-demo-1.amazon-ebs.aws:                 ||----w |
+    jiangren-packer-demo-1.amazon-ebs.aws:                 ||     ||
+    jiangren-packer-demo-1.amazon-ebs.aws:
+    jiangren-packer-demo-1.amazon-ebs.aws: default                    : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0
+    jiangren-packer-demo-1.amazon-ebs.aws:
+==> jiangren-packer-demo-1.amazon-ebs.aws: Provisioning step had errors: Running the cleanup provisioner, if present...
+==> jiangren-packer-demo-1.amazon-ebs.aws: Terminating the source AWS instance...
+
+
+Build 'jiangren-packer-demo-1.amazon-ebs.aws' errored after 1 minute 15 seconds: Error executing Ansible: Non-zero exit status: exit status 4
+```
+
+## Method 1:（排除干扰项，只为了跑成功代码） 
+直接设置 GLOBAL SSH CONFIGURATION in the '~/.ssh/config' file, add the followinglines to the file
+```
+Host *
+  HostKeyAlgorithms +ssh-rsa
+  PubkeyAcceptedKeyTypes ssh-rsa
+```
+然后注释掉 文件：aws-ansible.pkr.hcl里面 "ANSIBLE_SSH_ARGS='-oHostKeyAlgorithms=+ssh-rsa -oPubkeyAcceptedKeyTypes=ssh-rsa'",
+
+packer build aws-ansible.pkr.hcl
+
+Method 1 跑成功！
+
+## Method 2: 看到相关文章：The ssh-rsa signature scheme has been deprecated ,SSH2-RSA is more secured，
+
+
+STEP 1: 决定不用AWS RSA ,改用 AWS--KEY PAIR--CREATE NEW KEY PAIR--CHOOSE ED25519 这个选项 生成 PEM文件
+STEP 2: 把文件 aws-ansible.pkr.hcl 里面的 plugins version 0.0.2 改成 >1,
+```
+packer {
+  required_plugins {
+    amazon = {
+      version = ">= 0.0.2"
+      source  = "github.com/hashicorp/amazon"
+    }
+```
+
+STEP 3: 注释掉
+```
+ansible_env_vars = [
+      "ANSIBLE_SSH_ARGS='-oHostKeyAlgorithms=+ssh-rsa -oPubkeyAcceptedKeyTypes=ssh-rsa'",
+      "ANSIBLE_HOST_KEY_CHECKING=False"
+```
+packer build aws-ansible.pkr.hcl
+
+Method 2 跑成功！
+
+
+
+
 
 ## 主要知识点
 - [Class 7 Ansible](#class-7-ansible)
