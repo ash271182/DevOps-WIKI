@@ -1,4 +1,4 @@
-# Class-18-High_Availability_Kubernetes
+# Class-19-High_Availability_Kubernetes
 
 # High Availability
 ## Definition
